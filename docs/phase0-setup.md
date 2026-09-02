@@ -64,6 +64,24 @@ Successfully connected from the main development machine:
 ssh <username>@<server-ip>
 ```
 
+## Development Workflow — VS Code Remote-SSH
+
+Since the server has no GUI, all coding happens through **VS Code's
+Remote-SSH extension** rather than directly on the machine:
+
+1. Installed the "Remote - SSH" extension in VS Code on the main
+   development computer
+2. Connected via `Remote-SSH: Connect to Host` using the same
+   `username@server-ip` credentials as plain SSH
+3. This opens a full VS Code window — file explorer, syntax
+   highlighting, integrated terminal — but every file and command
+   executes directly on the server itself
+
+This means the server is edited and run as if working locally, while
+physically remaining headless. The project folder (`~/habamonitor`)
+and its git repository live **only on the server** — there is no
+separate local copy to keep in sync.
+
 ## Outcome
 
 The HP 250 G8 now boots headless into Ubuntu Server and is reachable
