@@ -1,2 +1,2 @@
-psutils
+psutil
 flask
