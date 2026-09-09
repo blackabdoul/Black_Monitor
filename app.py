@@ -26,7 +26,7 @@ def latest_stats():
         "SELECT * FROM stats ORDER BY id DESC LIMIT 1"
     ).fetchone()
     conn.close()
-    print(row)
+    # print(row)
 
     if row is None:
         return jsonify({"error": "no data yet"}), 404
@@ -45,7 +45,7 @@ def stats_history():
         ORDER BY timestamp ASC
         """
     ).fetchall()
-    print(rows)
+    # print(rows)
 
     conn.close()
 
