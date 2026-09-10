@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,33 +8,89 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
+
 <body>
 
   <header>
-    <h1>Black_Monitor</h1>
+    <div class="header-top">
+      <h1>Black_Monitor</h1>
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
     <p id="status">Connecting...</p>
   </header>
 
-  <section class="stat-cards">
-    <div class="card">
-      <h2>CPU</h2>
-      <p class="value" id="cpu-value">--%</p>
+
+  <!-- General status box -->
+  <section class="status-box">
+    <div class="status-item">
+      <span class="status-label">Uptime</span>
+      <span class="status-value" id="uptime-value">--</span>
     </div>
-    <div class="card">
-      <h2>RAM</h2>
-      <p class="value" id="ram-value">--%</p>
+    <div class="status-item">
+      <span class="status-label">Battery</span>
+      <span class="status-value" id="battery-value">--</span>
     </div>
-    <div class="card">
-      <h2>Disk</h2>
-      <p class="value" id="disk-value">--%</p>
-      <p class="subvalue" id="disk-detail">-- / -- GB</p>
+    <div class="status-item">
+      <span class="status-label">CPU Temp</span>
+      <span class="status-value" id="temp-value">--</span>
     </div>
   </section>
 
-  <section class="chart-container">
-    <canvas id="history-chart"></canvas>
+  <!-- Current value donuts -->
+  <section class="donut-row">
+    <div class="donut-card">
+      <canvas id="cpu-donut"></canvas>
+      <span class="donut-center-label" id="cpu-donut-label">--%</span>
+      <p class="donut-label">CPU</p>
+    </div>
+    <div class="donut-card">
+      <canvas id="ram-donut"></canvas>
+      <span class="donut-center-label" id="ram-donut-label">--%</span>
+      <p class="donut-label">RAM</p>
+    </div>
+    <div class="donut-card">
+      <canvas id="disk-donut"></canvas>
+      <span class="donut-center-label" id="disk-donut-label">--%</span>
+      <p class="donut-label">Disk</p>
+    </div>
+  </section>
+
+  <!-- History area charts -->
+  <section class="chart-row">
+    <div class="chart-container">
+      <canvas id="cpu-history-chart"></canvas>
+    </div>
+    <div class="chart-container">
+      <canvas id="ram-history-chart"></canvas>
+    </div>
+  </section>
+
+  <section class="chart-row">
+    <div class="chart-container">
+      <canvas id="network-chart"></canvas>
+    </div>
+  </section>
+
+  <!-- Per-process table -->
+  <section class="process-section">
+    <h2>Top Processes</h2>
+    <table id="process-table">
+      <thead>
+        <tr>
+          <th>Process</th>
+          <th>CPU %</th>
+          <th>RAM %</th>
+        </tr>
+      </thead>
+      <tbody id="process-table-body">
+        <tr>
+          <td colspan="3">Loading...</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
+
 </html>
