@@ -67,3 +67,155 @@ header {
   padding: 1.5rem;
   height: 350px;
 }
+
+.status-box {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.status-item {
+  background-color: var(--surface);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+}
+
+.status-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.3rem;
+}
+
+.status-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--teal);
+}
+
+.donut-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.donut-card {
+  background-color: var(--surface);
+  border-radius: 12px;
+  padding: 1rem;
+  flex: 1;
+  min-width: 160px;
+  text-align: center;
+}
+
+.donut-card canvas {
+  max-height: 150px;
+}
+
+.donut-label {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.chart-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.chart-container {
+  background-color: var(--surface);
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 280px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.process-section {
+  background-color: var(--surface);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.process-section h2 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0;
+}
+
+#process-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#process-table th {
+  text-align: left;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(231, 233, 238, 0.1);
+}
+
+#process-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(231, 233, 238, 0.05);
+}
+
+/* Warning threshold color, applied via JS when usage is high */
+.status-warning {
+  color: var(--amber) !important;
+}
+
+
+[data-theme="light"] {
+  --ink: #F4F6FA;
+  --surface: #FFFFFF;
+  --text: #16202E;
+  --muted: #5B6472;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#theme-toggle {
+  background: none;
+  border: 1px solid var(--muted);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 1.1rem;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
+.donut-card {
+  position: relative;
+}
+
+.donut-center-label {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  pointer-events: none;
+}
