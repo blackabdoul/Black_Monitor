@@ -6,12 +6,12 @@ history chart, consuming the two API endpoints built in Phase 2.
 
 ## Structure Added
 
-habamonitor/
-├── templates/
-│ └── index.html (updated — real dashboard markup)
-└── static/
-    ├── style.css (new)
-    └── script.js (new)
+habamonitor/<br>
+├── templates/<br>
+│ └── index.html (updated — real dashboard markup)<br>
+└── static/<br>
+    ├── style.css (new)<br>
+    └── script.js (new)<br>
 
 
 Flask serves anything under `static/` automatically at `/static/...`,
