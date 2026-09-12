@@ -19,53 +19,25 @@ header {
   margin-bottom: 2rem;
 }
 
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#theme-toggle {
+  background: none;
+  border: 1px solid var(--muted);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 1.1rem;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
 #status {
   color: var(--muted);
   font-size: 0.9rem;
-}
-
-.stat-cards {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.card {
-  background-color: var(--surface);
-  border-radius: 12px;
-  padding: 1.5rem;
-  min-width: 160px;
-  flex: 1;
-}
-
-.card h2 {
-  margin: 0 0 0.5rem 0;
-  font-size: 0.9rem;
-  color: var(--muted);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.value {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--amber);
-  margin: 0;
-}
-
-.subvalue {
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin: 0.3rem 0 0 0;
-}
-
-.chart-container {
-  background-color: var(--surface);
-  border-radius: 12px;
-  padding: 1.5rem;
-  height: 350px;
 }
 
 .status-box {
@@ -113,10 +85,22 @@ header {
   flex: 1;
   min-width: 160px;
   text-align: center;
+  position: relative;
 }
 
 .donut-card canvas {
   max-height: 150px;
+}
+
+.donut-center-label {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  pointer-events: none;
 }
 
 .donut-label {
@@ -176,46 +160,14 @@ header {
   border-bottom: 1px solid rgba(231, 233, 238, 0.05);
 }
 
-/* Warning threshold color, applied via JS when usage is high */
+/* Applied via JS when a metric crosses its warning threshold */
 .status-warning {
   color: var(--amber) !important;
 }
-
 
 [data-theme="light"] {
   --ink: #F4F6FA;
   --surface: #FFFFFF;
   --text: #16202E;
   --muted: #5B6472;
-}
-
-.header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#theme-toggle {
-  background: none;
-  border: 1px solid var(--muted);
-  border-radius: 8px;
-  color: var(--text);
-  font-size: 1.1rem;
-  padding: 0.4rem 0.7rem;
-  cursor: pointer;
-}
-
-.donut-card {
-  position: relative;
-}
-
-.donut-center-label {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--text);
-  pointer-events: none;
 }

@@ -7,7 +7,7 @@ on the network.
 
 ## Structure Added
 
-habamonitor/
+Black_Monitor/
 ├── app.py
 └── templates/
  └── index.html
@@ -35,7 +35,7 @@ into JSON-ready data in each route.
   from the `stats` table as JSON (`ORDER BY id DESC LIMIT 1`).
   Returns a `404` with an error message if the table is empty.
 - **`GET /api/stats/history`** — returns every row from the last hour
-  (`WHERE timestamp >= datetime('now', '-1 hour')`), ordered oldest
+  (`WHERE timestamp >= datetime('now', '-10 minutes')`), ordered oldest
   to newest, as a JSON array — the shape a future chart will consume.
 
 ### Networking
@@ -65,7 +65,7 @@ Returned a live JSON object matching the most recent database row.
 Tested from a separate device (phone) on the same WiFi network:
 
 http://<server-ip>:5000/
-http://<server-ip>:5000/api/stats/latest
+http://<server-ip>:5000/api/stats/history
 
 Both loaded successfully, confirming the server is reachable across
 the local network, not just from itself.

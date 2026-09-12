@@ -57,7 +57,7 @@ Two async functions, each polling one API endpoint:
 
 Both functions run once immediately on page load, then repeat via
 `setInterval` — `updateLatest` every 5 seconds, `updateHistory` every
-30.
+15.
 
 ## Design Note — Polling Interval vs. Collection Interval
 
@@ -77,7 +77,7 @@ Ran the collector and Flask app simultaneously and loaded the
 dashboard from a phone browser on the same home network:
 
 - Stat cards displayed live values, updating every 5 seconds
-- The line chart rendered CPU and RAM history, redrawing every 30
+- The line chart rendered CPU and RAM history, redrawing every 15
   seconds with newly available data points
 - Disabling the Flask process confirmed the "Connection lost" status
   message appears correctly rather than the page breaking silently

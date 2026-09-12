@@ -1,7 +1,7 @@
 # Phase 1 — Data Collector
 
 ## Goal
-Build the first real component of HabaMonitor: a Python script that
+Build the first real component of Black_Monitor: a Python script that
 reads live system statistics from the server and stores them in a
 database, laying the foundation for everything the dashboard will
 later display.

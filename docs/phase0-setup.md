@@ -78,7 +78,7 @@ Remote-SSH extension** rather than directly on the machine:
    executes directly on the server itself
 
 This means the server is edited and run as if working locally, while
-physically remaining headless. The project folder (`~/habamonitor`)
+physically remaining headless. The project folder (`~/Black_Monitor`)
 and its git repository live **only on the server** — there is no
 separate local copy to keep in sync.
 

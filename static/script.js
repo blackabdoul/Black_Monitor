@@ -3,7 +3,7 @@ const htmlElement = document.documentElement;
 
 function applyTheme(theme) {
   htmlElement.setAttribute("data-theme", theme);
-  themeToggleBtn.textContent = theme === "dark" ? "🌙 " : "☀️";
+  themeToggleBtn.textContent = theme === "dark" ? "🌙" : "☀️";
   localStorage.setItem("blackmonitor-theme", theme);
 }
 
@@ -81,6 +81,15 @@ async function updateLatest() {
   } catch (error) {
     document.getElementById("status").textContent = "Connection lost";
   }
+}
+
+const CPU_WARNING_THRESHOLD = 80;
+
+const cpuLabel = document.getElementById("cpu-donut-label");
+if (data.cpu_percent >= CPU_WARNING_THRESHOLD) {
+  cpuLabel.classList.add("status-warning");
+} else {
+  cpuLabel.classList.remove("status-warning");
 }
 
 function buildAreaChart(canvasId, label, color) {
