@@ -10,7 +10,7 @@ on the network.
 Black_Monitor/<br>
 ├── app.py<br>
 └── templates/<br>
-  └── index.html
+    └── index.html
 
 Flask's convention of looking for HTML files inside a `templates/`
 folder (relative to `app.py`) is used as-is — no custom configuration
