@@ -5,6 +5,7 @@
   --muted: #8A93A6;
   --amber: #F2A93B;
   --teal: #21C7A8;
+  --danger: red;
 }
 
 body {
@@ -162,7 +163,7 @@ header {
 
 /* Applied via JS when a metric crosses its warning threshold */
 .status-warning {
-  color: var(--amber) !important;
+  color: var(--danger) !important;
 }
 
 [data-theme="light"] {

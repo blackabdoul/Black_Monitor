@@ -1,3 +1,4 @@
+const CPU_WARNING_THRESHOLD = 80;
 const themeToggleBtn = document.getElementById("theme-toggle");
 const htmlElement = document.documentElement;
 
@@ -76,20 +77,18 @@ async function updateLatest() {
         ? data.cpu_temp_c + "°C"
         : "N/A";
 
+    const cpuLabel = document.getElementById("cpu-donut-label");
+    if (data.cpu_percent >= CPU_WARNING_THRESHOLD) {
+      cpuLabel.classList.add("status-warning");
+    } else {
+      cpuLabel.classList.remove("status-warning");
+    }
+
     document.getElementById("status").textContent =
       "Last updated: " + new Date().toLocaleTimeString();
   } catch (error) {
     document.getElementById("status").textContent = "Connection lost";
   }
-}
-
-const CPU_WARNING_THRESHOLD = 80;
-
-const cpuLabel = document.getElementById("cpu-donut-label");
-if (data.cpu_percent >= CPU_WARNING_THRESHOLD) {
-  cpuLabel.classList.add("status-warning");
-} else {
-  cpuLabel.classList.remove("status-warning");
 }
 
 function buildAreaChart(canvasId, label, color) {
