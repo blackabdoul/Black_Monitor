@@ -172,3 +172,44 @@ header {
   --text: #16202E;
   --muted: #5B6472;
 }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--surface);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 1rem;
+  z-index: 10;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5 rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 1.2 rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.navbar-links a:hover {
+  color: var(--teal);
+}
+
+html {
+  scroll-behavior: smooth;
+}

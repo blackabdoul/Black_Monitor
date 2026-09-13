@@ -11,17 +11,23 @@
 
 <body>
 
-  <header>
-    <div class="header-top">
-      <h1>Black_Monitor</h1>
-      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+  <nav class="navbar">
+    <span><a href="/" class="navbar-brand">Black_Monitor </a></span>
+    <div class="navbar-links">
+      <a href="#status-section">Status</a>
+      <a href="#history-section">History</a>
+      <a href="#process-section">Processes</a>
     </div>
+    <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+  </nav>
+
+  <header>
     <p id="status">Connecting...</p>
   </header>
 
 
   <!-- General status box -->
-  <section class="status-box">
+  <section class="status-box" id="status-section">
     <div class="status-item">
       <span class="status-label">Uptime</span>
       <span class="status-value" id="uptime-value">--</span>
@@ -56,7 +62,7 @@
   </section>
 
   <!-- History area charts -->
-  <section class="chart-row">
+  <section class="chart-row" id="history-section">
     <div class="chart-container">
       <canvas id="cpu-history-chart"></canvas>
     </div>
@@ -72,7 +78,7 @@
   </section>
 
   <!-- Per-process table -->
-  <section class="process-section">
+  <section class="process-section" id="process-section">
     <h2>Top Processes</h2>
     <table id="process-table">
       <thead>
