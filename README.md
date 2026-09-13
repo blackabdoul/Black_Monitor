@@ -8,7 +8,8 @@ A self-hosted server monitoring dashboard, built from scratch as a
 CS50 final project — running on a repurposed HP 250 G8 laptop turned
 into a home server.
 
-![dashboard screenshot](docs/screenshot.png)
+![dashboard screenshot](/static/Screenshot%202026-09-13%20140854.png)
+![dashboard screenshot](/static/Screenshot%202026-09-13%20140942.png)
 
 ## What It Does
 
@@ -29,11 +30,7 @@ reachable from any device on the same network.
 
 ## Why I Built This
 
-
-[Abdoul — a sentence or two here in your own words: the idea of
-repurposing old hardware, wanting to understand the full stack behind
-tools like Grafana/Netdata rather than just installing one, and
-tying it to CS50 as the final project.]
+The idea of building a hardware health-monitoring software emanated from the love I have for both hardware components and cloud infrastructures. Also I've always wanted to repurpose my former idle laptop into a self-hosted server for media, then I said why not use this long-awaited project as my cs50 final project.
 
 ## Architecture
 
