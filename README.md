@@ -99,7 +99,7 @@ This project was built in five documented phases:
 - Log per-process history over time, not just a live snapshot
 - Add threshold-based alerts via a Telegram/Discord webhook
 - Roll up old data into hourly averages to keep the database small long-term
-- Extend the collector into an agent that can report from multiple machines to one dashboard
+- Add active service health checks (e.g., is SSH/Samba actually responding), not just resource usage
 - Package it as an installable CLI tool (`pip install black-monitor`, or a one-line install script) so anyone can set it up on their own old hardware
 
 ## Thank you, This was CS50 :)
