@@ -8,4 +8,4 @@
 
 ## **City and Country** : Abidjan, Ivory Coast
 
-## **Date of recording this video** : 
+## **Date of recording this video** : October 3, 2026.
