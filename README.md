@@ -50,6 +50,11 @@ Two independent processes run continuously on the server:
 - **Frontend:** HTML, CSS, vanilla JavaScript, Chart.js
 - **OS:** Ubuntu Server 24.04 LTS
 
+## Hardware (server)
+
+- HP 250 G8, Intel i3-10th gen, 8GB RAM, 1TB HDD
+- Repurposed from Windows to a headless Ubuntu Server install
+
 ## Running It Yourself
 
 ```bash
@@ -88,7 +93,11 @@ This project was built in five documented phases:
 - [Phase 4 — Dashboard Upgrade](docs/phase4-dashboard-upgrade.md)
 - [Phase 5 — Code Review & Cleanup](docs/phase5-review.md)
 
-## Hardware
 
-- HP 250 G8, Intel i3-10th gen, 8GB RAM, 1TB HDD
-- Repurposed from Windows to a headless Ubuntu Server install
+## Possible Extensions
+
+- Log per-process history over time, not just a live snapshot
+- Add threshold-based alerts via a Telegram/Discord webhook
+- Roll up old data into hourly averages to keep the database small long-term
+- Extend the collector into an agent that can report from multiple machines to one dashboard
+- Package it as an installable CLI tool (`pip install black-monitor`, or a one-line install script) so anyone can set it up on their own old hardware
