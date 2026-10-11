@@ -58,10 +58,10 @@ Two independent processes run continuously on the server:
 ## Running It Yourself
 
 ```bash
-git clone https://github.com/yourusername/black-monitor.git
-cd black-monitor
-python3 -m venv venv
-source venv/bin/activate
+git clone https://github.com/blackabdoul/Black_Monitor.git
+cd Black_Monitor
+python3 -m venv v-env
+source v-env/bin/activate
 pip install -r requirements.txt
 
 # In one terminal:
